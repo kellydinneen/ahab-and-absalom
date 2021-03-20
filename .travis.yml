@@ -1,9 +1,27 @@
 language: node_js
 node_js:
   - "node"
+addons:
+apt:
+  packages:
+      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
+    - libgconf-2-4
 notifications:
   email: false
+cache:
+  # Caches $HOME/.npm when npm ci is default script command
+  # Caches node_modules in all other cases
+  npm: true
+  directories:
+    # we also need to cache folder with Cypress binary
+    - ~/.cache
+install:
+  - npm ci
+script:
+  - npm start &
+  - $(npm bin)/cypress run
 deploy:
+  skip_cleanup: true
   provider: firebase
   token:
     secure: "1//06hGDfW1glSTfCgYIARAAGAYSNwF-L9Ir9mH_TJZjOiWRoZq2QKnx0_IQ6W7prMXic3MbbW82_KMGWOoj1RC3z53kp_YfIfMl_Mg"
