@@ -4,9 +4,6 @@ node_js:
 notifications:
   email: false
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: GH_KEY 
-  keep_history: true
-  on:
-    branch: main
+  provider: firebase
+  token:
+    secure: "1//06hGDfW1glSTfCgYIARAAGAYSNwF-L9Ir9mH_TJZjOiWRoZq2QKnx0_IQ6W7prMXic3MbbW82_KMGWOoj1RC3z53kp_YfIfMl_Mg"
