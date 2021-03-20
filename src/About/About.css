@@ -1,0 +1,19 @@
+.about-header {
+  background-color: #B5443E;
+  text-align: center;
+  text-align-last: center;
+  width: 75px;
+  height: 25px;
+  color: #ffff;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.about {
+  width: 40%;
+  border: 2px solid #B5443E;
+  border-radius: 10px;
+  margin-top: -30px;
+  padding: 30px;
+}

@@ -1,0 +1,23 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #1A1D27;
+}
+
+.opening {
+  /* border: 1px solid black; */
+  width: 52%;
+}
+.parking {
+  /* border: 1px solid black; */
+  width: 52%;
+}
+.crowns {
+  height: 60px;
+}
+
+.crowns:hover {
+  filter: drop-shadow(0 0 0.75rem #8E8899);
+}
